@@ -1,0 +1,527 @@
+/* Reset CSS Sederhana */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #34495e; /* Warna teks utama (abu-abu tua kebiruan) */
+    background-color: #f7fafc; /* Warna background body (sangat terang) */
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Palet Warna Indomedia */
+:root {
+    --isp-dark-bg: #1a202c; /* Biru dongker / Arang gelap (dari bg logo) */
+    --isp-orange: #f9a826;   /* Oranye (dari logo) */
+    --isp-grey: #718096;     /* Abu-abu (dari logo) */
+    --isp-light-grey: #a0aec0; /* Abu-abu muda */
+    --isp-white: #ffffff;
+    --isp-text-dark: #2d3748; /* Teks utama pada background terang */
+    --isp-text-light: #edf2f7; /* Teks utama pada background gelap */
+    --isp-section-bg-light: #ffffff;
+}
+
+/* Utilitas */
+.bg-light {
+    background-color: var(--isp-section-bg-light);
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.bg-dark {
+    background-color: var(--isp-dark-bg);
+    color: var(--isp-text-light);
+}
+
+.bg-dark a {
+    color: var(--isp-orange);
+}
+
+.bg-dark a:hover {
+    color: #fbad42; /* Oranye sedikit lebih terang saat hover */
+}
+
+.icon-section {
+    margin-right: 10px;
+    color: var(--isp-orange); /* Ikon judul section menggunakan warna oranye */
+}
+
+/* Header */
+header {
+    background-color: var(--isp-white);
+    padding: 15px 0;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 45px; /* Sesuaikan ukuran logo */
+}
+
+/* Hero Section */
+#hero {
+    background-color: #5a8bed; /* WARNA DARI ANDA - TETAP */
+    color: var(--isp-text-light); /* Teks terang di atas background hero */
+    padding: 60px 0;
+    min-height: auto; /* Memungkinkan tinggi section menyesuaikan konten */
+    display: flex;
+    align-items: center; /* Vertikal align item di tengah */
+    justify-content: center;
+}
+
+#hero .container {
+    display: flex;
+    align-items: center; /* Vertikal align item di tengah */
+    justify-content: space-between;
+    gap: 30px; /* Sedikit menambah jarak antar kolom */
+}
+
+#hero .hero-content {
+    flex: 1 1 50%; /* PERBAIKAN: Distribusi ruang lebih seimbang */
+    text-align: left;
+    padding-right: 20px; /* Jaga jarak dari gambar */
+}
+
+#hero .hero-icon {
+    font-size: 2.8em; /* PERBAIKAN: Sedikit dikecilkan */
+    margin-bottom: 15px;
+    color: var(--isp-orange);
+}
+
+#hero h1 {
+    font-size: 2.4em; /* PERBAIKAN: Sedikit dikecilkan untuk keseimbangan */
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.25; /* Sedikit penyesuaian line-height */
+    color: var(--isp-white);
+}
+
+#hero .sub-headline {
+    font-size: 1.0em; /* PERBAIKAN: Sedikit dikecilkan */
+    font-weight: 300;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.hero-image-container {
+    flex: 1 1 45%; /* PERBAIKAN: Distribusi ruang lebih seimbang */
+    text-align: center; /* PERBAIKAN: Gambar di tengah kontainernya */
+    max-width: 400px; /* PERBAIKAN: Izinkan gambar sedikit lebih lebar di desktop */
+    display: flex; /* Untuk alignment gambar */
+    justify-content: center; /* Gambar tengah horizontal */
+    align-items: center; /* Gambar tengah vertikal */
+}
+
+.hero-image-container img {
+    max-width: 100%;
+    height: auto;
+    max-height: 70vh; /* PERBAIKAN: Batasi tinggi gambar agar tidak terlalu dominan */
+    display: block;
+    /* margin-left: auto; Dihapus karena text-align:center di container */
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    background-color: var(--isp-orange);
+    color: var(--isp-dark-bg);
+}
+
+.btn-primary:hover {
+    background-color: #e69500;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Sisa CSS Anda (Content Sections, Cards, dll.) tetap sama */
+/* ... (Salin sisa CSS Anda dari sini hingga sebelum bagian Responsive Design) ... */
+/* Content Sections */
+.content-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2.2em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--isp-text-dark);
+}
+.bg-dark .content-section h2, .bg-dark .content-section p {
+    color: var(--isp-text-light);
+}
+.bg-dark .icon-section {
+    color: var(--isp-orange);
+}
+
+.content-section p {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    color: var(--isp-grey);
+}
+
+/* Cards Container (Alasan Isolir) */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.card {
+    background-color: var(--isp-white);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 5px 15px rgba(45, 55, 72, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(45, 55, 72, 0.12);
+}
+
+.card-icon {
+    font-size: 2.5em;
+    color: var(--isp-orange);
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--isp-text-dark);
+}
+
+.card p {
+    font-size: 0.95em;
+    color: var(--isp-grey);
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Langkah Solusi */
+.solusi-langkah {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.langkah {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border-left: 5px solid var(--isp-orange);
+    border-radius: 0 8px 8px 0;
+}
+
+.langkah:last-child {
+    margin-bottom: 0;
+}
+
+.langkah-ikon {
+    font-size: 2em;
+    color: var(--isp-orange);
+    margin-right: 25px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.langkah-info h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--isp-text-dark);
+}
+
+.langkah-info p {
+    font-size: 1em;
+    color: var(--isp-grey);
+    margin-bottom: 10px;
+}
+
+.link-solusi {
+    color: var(--isp-orange);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link-solusi:hover {
+    text-decoration: underline;
+    color: #e69500;
+}
+
+/* Kontak */
+#kontak {
+    padding: 60px 0;
+}
+#kontak .kontak-subtext {
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    color: var(--isp-section-bg-light);
+}
+.kontak-info-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.kontak-item {
+    padding: 20px;
+}
+
+.kontak-item i {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: var(--isp-orange);
+}
+
+.kontak-item h3 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+    color: var(--isp-text-light);
+}
+.kontak-item p {
+    font-size: 1em;
+    color: var(--isp-section-bg-light);
+    margin-bottom: 0;
+}
+.kontak-item p a {
+    color: var(--isp-text-light);
+    text-decoration: none;
+}
+.kontak-item p a:hover {
+    color: var(--isp-white);
+    text-decoration: underline;
+}
+
+.jam-operasional {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: var(--isp-white);
+}
+
+/* Footer */
+footer {
+    background-color: #121822;
+    color: var(--isp-light-grey);
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+footer a {
+    color: var(--isp-light-grey);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--isp-white);
+    text-decoration: underline;
+}
+
+/* Animasi Fade-in */
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) { /* Tablet */
+    #hero .container {
+        gap: 20px; /* PERBAIKAN: Sesuaikan gap */
+    }
+    #hero .hero-content {
+        flex-basis: 50%; /* PERBAIKAN: Lebih seimbang */
+        padding-right: 15px;
+    }
+    #hero h1 {
+        font-size: 2.0em; /* PERBAIKAN: Kecilkan agar seimbang */
+    }
+    #hero .sub-headline {
+        font-size: 0.9em; /* PERBAIKAN: Kecilkan */
+    }
+    #hero .hero-icon {
+        font-size: 2.5em; /* PERBAIKAN: Kecilkan */
+    }
+    .hero-image-container {
+        flex-basis: 45%; /* PERBAIKAN: Lebih seimbang */
+        max-width: 320px; /* PERBAIKAN: Sesuaikan agar proporsional */
+    }
+    .hero-image-container img {
+        max-height: 65vh; /* PERBAIKAN: Batasi tinggi gambar */
+    }
+
+    .content-section h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) { /* Target: Larger Phones / Portrait Tablets */
+    .container {
+        width: 95%;
+    }
+
+    /* Hero Section Adjustments */
+    #hero {
+        padding: 40px 0;
+    }
+    #hero .container {
+        gap: 15px;
+        /* Mempertahankan flex-direction: row untuk gambar di kanan */
+    }
+    #hero .hero-content {
+        flex-basis: 50%; /* PERBAIKAN: Seimbangkan dengan gambar */
+        text-align: left;
+        padding-right: 10px;
+        order: 1;
+    }
+    #hero .hero-icon {
+        font-size: 2.0em; /* PERBAIKAN: Dikecilkan */
+        margin-bottom: 10px;
+    }
+    #hero h1 {
+        font-size: 1.6em; /* PERBAIKAN: Dikecilkan */
+        line-height: 1.3;
+    }
+    #hero .sub-headline {
+        font-size: 0.85em; /* PERBAIKAN: Dikecilkan */
+        margin-bottom: 18px;
+    }
+    .hero-image-container {
+        flex-basis: 45%; /* PERBAIKAN: Seimbangkan dengan teks */
+        max-width: 180px;  /* PERBAIKAN: Sesuaikan agar gambar tidak terlalu kecil/besar */
+        order: 2;
+        /* text-align: right; Dihapus, biarkan flexbox yang mengatur via justify/align di container */
+    }
+    .hero-image-container img {
+        /* margin-left: auto; Dihapus */
+        /* margin-right: 0; Dihapus */
+        max-height: 60vh; /* PERBAIKAN: Batasi tinggi gambar */
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.85em;
+    }
+
+    /* Other sections from your CSS */
+    .content-section {
+        padding: 40px 0;
+    }
+    .content-section h2 {
+        font-size: 1.8em;
+    }
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .langkah {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .langkah-ikon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .kontak-info-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) { /* Target: Smaller Phones */
+    header .logo img {
+        height: 38px;
+    }
+
+    /* Hero Section Adjustments */
+    #hero .container {
+        gap: 10px;
+         /* Mempertahankan flex-direction: row untuk gambar di kanan */
+    }
+    #hero .hero-content {
+        flex-basis: 55%; /* PERBAIKAN: Teks sedikit lebih dominan karena keterbatasan ruang */
+        padding-right: 5px;
+    }
+    #hero .hero-icon {
+        font-size: 1.8em; /* PERBAIKAN: Dikecilkan */
+        margin-bottom: 8px;
+    }
+    #hero h1 {
+        font-size: 1.3em; /* PERBAIKAN: Dikecilkan agar ringkas */
+        line-height: 1.3;
+    }
+    #hero .sub-headline {
+        font-size: 0.75em; /* PERBAIKAN: Dikecilkan */
+        margin-bottom: 15px;
+    }
+    .hero-image-container {
+        flex-basis: 40%; /* PERBAIKAN: Beri ruang yang cukup untuk gambar */
+        max-width: 140px; /* PERBAIKAN: Sesuaikan agar gambar terlihat jelas & seimbang */
+        /* Koreksi typo dari CSS Anda sebelumnya (max-width: 600px tidak sesuai) */
+    }
+    .hero-image-container img {
+       max-height: 55vh; /* PERBAIKAN: Batasi tinggi gambar */
+    }
+
+    .btn {
+        padding: 7px 12px;
+        font-size: 0.75em;
+    }
+}
